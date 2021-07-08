@@ -1,4 +1,23 @@
-{% extends "base.html" %} {% block title %}View all URLS{% endblock %} {% block content %} {% for
-url in Data %}
-<p><strong>Short:</strong>{{url.short}} <strong>Long:</strong> {{url.long}}</p>
-{% endfor %} {% endblock %}
+{% extends "base.html" %} {% block title %}View all URLS{% endblock %} {% block content %}
+
+<h1 class="saved-h1">Saved URLS</h1>
+<table class="styled-table">
+  <thead>
+    <tr>
+      <th>Short URL</th>
+      <th>Long URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for url in Data %}
+    <tr>
+      <td>http://127.0.0.1:5000/{{url.short}}</td>
+      <td>{{url.long}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<div class="app-nav">
+  <a href="http://127.0.0.1:5000/">BACK TO HOME</a>
+</div>
+{% endblock %}

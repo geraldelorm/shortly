@@ -1,4 +1,36 @@
 {% extends "base.html" %} {% block title %}Shortly Result{% endblock %} {% block content %}
-<h1>http://127.0.0.1:5000/{{short_url_display}}</h1>
-<a href="http://127.0.0.1:5000/">BACK TO HOME</a>
+<form class="booking" action="#" , method="post">
+  <div class="booking_inputs">
+    <div class="booking_input">
+      <label for="url">Enter an https:// URL:</label>
+      <input
+        type="url"
+        name="user-input"
+        id="url check-in"
+        placeholder="https://example.com"
+        pattern="https://.*"
+        size="50"
+        required
+      />
+    </div>
+  </div>
+  <input type="submit" value="shorten" class="booking_button" />
+
+  <div class="area">
+    <div class="short">
+      SHORT URL:
+      <span
+        ><a target="_blank" href="http://127.0.0.1:5000/{{short_url_display}}"
+          >http://127.0.0.1:5000/{{short_url_display}}</a
+        ></span
+      >
+    </div>
+  </div>
+</form>
+
+<div class="app-nav">
+  <a href="http://127.0.0.1:5000/">BACK TO HOME</a>
+  <a href="http://127.0.0.1:5000/data">ALL URLS</a>
+</div>
+
 {% endblock %}

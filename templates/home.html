@@ -1,17 +1,19 @@
 {% extends "base.html" %} {% block title %}Shortly{% endblock %} {% block content %}
-<form action="#" , method="post">
-  <label for="url">Enter an https:// URL:</label>
-
-  <input
-    type="url"
-    name="user-input"
-    id="url"
-    placeholder="https://example.com"
-    pattern="https://.*"
-    size="50"
-    required
-  />
-  <br />
-  <input type="submit" value="submit" class="btn btn-primary" />
+<form class="booking" action="#" , method="post">
+  <div class="booking_inputs">
+    <div class="booking_input">
+      <label for="url">Enter an https:// URL:</label>
+      <input
+        type="url"
+        name="user-input"
+        id="url check-in"
+        placeholder="https://example.com"
+        pattern="https://.*"
+        size="50"
+        required
+      />
+    </div>
+  </div>
+  <input type="submit" value="shorten" class="booking_button" />
 </form>
 {% endblock %}

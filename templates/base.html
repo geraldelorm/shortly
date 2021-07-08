@@ -1,28 +1,125 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-	<meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
-</head>
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index.css') }}" >
+    <title>Shortly</title>
+  </head>
 <body>
-
-    <div class="container-fluid">
-        <h1>Welcome to Shortly</h1>
-        <hr>
-        {% block content%}
-        {% endblock %}
+        <!-- HERO AREA -->
+    <div class="hero-area">
+      <div class="top-header" id="top-header">
+        <div class="container">
+          <header>
+            <h2>SHORTLY</h2>
+            <button class="reservations">
+              <i class="material-icons"><span class="material-icons-outlined">link</span></i>
+              shorten
+            </button>
+          </header>
+        </div>
+      </div>
+      <div class="container">
+        <section>
+          <h1 class="main-heading">Short links, that bring big results to your business</h1>
+           {% block content%}
+            {% endblock %}
+        </section>
+      </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-name">Testimonials</div>
 
+        <h2>What <strong>clients</strong> say about us.</h2>
+
+        <div class="feedback">
+          <div class="feedback-card">
+            <div class="feedback-card__dialog">
+              <div class="feedback-card__dialog_title">Amazing results</div>
+              <div class="feedback-card__dialog_content">
+                Phasellus ut elementum mauris. Quisque pharetra justo neque, in pulvinar nisl
+                fringilla in. Duis molestie gravida enim. Cras fermentum eros ipsum, posuere rutrum
+                nibh eleifend quis.
+              </div>
+            </div>
+
+            <div class="feedback-card__user">
+              <img src="{{ url_for('static', filename='/images/person-1.png') }}" alt="Person 1" />
+
+              <div class="feedback-card__user__details">
+                <div class="feedback-card__user__name">Miller Stark</div>
+                <div class="feedback-card__user__location">from Finland</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <div class="feedback-card__dialog">
+              <div class="feedback-card__dialog_title">Best experiences!</div>
+              <div class="feedback-card__dialog_content">
+                Phasellus ut elementum mauris. Quisque pharetra justo neque, in pulvinar nisl
+                fringilla in. Duis molestie gravida enim. Cras fermentum eros ipsum, posuere rutrum
+                nibh eleifend quis.
+              </div>
+            </div>
+
+            <div class="feedback-card__user">
+              <img src="{{ url_for('static', filename='/images/person-2.png') }}" alt="Person 2" />
+
+              <div class="feedback-card__user__details">
+                <div class="feedback-card__user__name">Zara Herman</div>
+                <div class="feedback-card__user__location">from Canada</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <div class="feedback-card__dialog">
+              <div class="feedback-card__dialog_title">I use it all the time</div>
+              <div class="feedback-card__dialog_content">
+                Phasellus ut elementum mauris. Quisque pharetra justo neque, in pulvinar nisl
+                fringilla in. Duis molestie gravida enim. Cras fermentum eros ipsum, posuere rutrum
+                nibh eleifend quis.
+              </div>
+            </div>
+
+            <div class="feedback-card__user">
+              <img src="{{ url_for('static', filename='/images/person-3.png') }}" alt="Person 3" />
+
+              <div class="feedback-card__user__details">
+                <div class="feedback-card__user__name">Jackson Nguyen</div>
+                <div class="feedback-card__user__location">from Vietnam</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        ©<a href="https://www.geraldelorm.tech"> Shortly.com</a>
+      </div>
+    </footer>
+
+    <script>
+      window.onscroll = () => {
+        if (window.pageYOffset > 50) {
+          document.getElementById('top-header').classList.add('top-header--white-background');
+        } else {
+          document.getElementById('top-header').classList.remove('top-header--white-background');
+        }
+      };
+    </script>
   </body>
 </body>
 </html>
