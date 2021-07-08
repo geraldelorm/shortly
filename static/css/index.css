@@ -155,6 +155,7 @@ header h2 {
   .booking_button {
     margin-top: 0;
     margin-left: var(--space-sm);
+    margin-right: 3rem;
   }
 }
 
