@@ -27,7 +27,11 @@
       </div>
       <div class="container">
         <section>
-          <h1 class="main-heading">Short links, that bring big results to your business</h1>
+
+          <h1 class="main-heading"> 
+            {% block head%}
+            {% endblock %} 
+            </h1>
            {% block content%}
             {% endblock %}
         </section>
@@ -39,7 +43,7 @@
       <div class="container">
         <div class="section-name">Testimonials</div>
 
-        <h2>What <strong>clients</strong> say about us.</h2>
+        <h2>What <strong>business owners</strong> say about us.</h2>
 
         <div class="feedback">
           <div class="feedback-card">

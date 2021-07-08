@@ -13,7 +13,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 #to stop modification tracking errors
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False 
 
-#CREATE DATABASE MODULE
+#CREATE DATABASE MODULE 
 db = SQLAlchemy(app)
 
 #THE MODULE
