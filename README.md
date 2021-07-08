@@ -1,5 +1,5 @@
-###### CONTRIBUTORS
+# CONTRIBUTORS
 
-# Gerald Elorm Gbagbe
+###### Gerald Elorm Gbagbe
 
-# Alexander Inkoom
+###### Alexander Inkoom
