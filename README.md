@@ -1,8 +1,5 @@
-# shortly
+###### CONTRIBUTORS
 
-URL shortener
+# Gerald Elorm Gbagbe
 
-## CONTRIBUTORS
-
-Gerald Elorm Gbagbe
-Alexander Inkoom
+# Alexander Inkoom
